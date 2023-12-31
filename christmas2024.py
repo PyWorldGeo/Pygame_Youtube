@@ -104,7 +104,7 @@ snow_group = pygame.sprite.Group()
 color = red
 #მილოცვა
 def message(color, font):
-    rendered_text = font.render("Happy New Year 2023!", False, color)
+    rendered_text = font.render("Happy New Year 2024!", False, color)
     text_rect = rendered_text.get_rect()
     text_rect.center = [width/2, height//6]
     screen.blit(rendered_text, text_rect)
