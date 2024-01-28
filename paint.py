@@ -14,9 +14,8 @@ black = (0, 0, 0)
 green = (50, 255, 50)
 blue = (50, 50, 255)
 
-marker_icon = pygame.image.load("highlighter.png")
-marker_image = pygame.image.load("marker.png")
-marker_image = pygame.transform.scale(marker_image, (100, 100))
+marker_icon = pygame.image.load("images/marker.png")
+
 
 
 pygame.display.set_caption("Paint")
@@ -24,8 +23,7 @@ pygame.display.set_icon(marker_icon)
 
 
 class Marker:
-    def __init__(self, image):
-        self.image = image
+    def __init__(self):
         self.size = 20
         self.rect = pygame.Rect(width/2, height/2, self.size, self.size)
         self.rect.center = [width/2, height/2]
@@ -42,9 +40,8 @@ class Marker:
         pygame.draw.circle(screen, self.color, self.rect.center, self.size/2)
         self.rect = pygame.Rect(self.rect.x, self.rect.y, self.size, self.size)
 
-        # screen.blit(self.image, (self.rect.x, self.rect.y))
 
-marker = Marker(marker_image)
+marker = Marker()
 screen.fill((255, 255, 255))
 
 
