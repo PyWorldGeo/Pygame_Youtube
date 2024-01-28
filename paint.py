@@ -16,8 +16,6 @@ blue = (50, 50, 255)
 
 marker_icon = pygame.image.load("images/marker.png")
 
-
-
 pygame.display.set_caption("Paint")
 pygame.display.set_icon(marker_icon)
 
@@ -50,6 +48,7 @@ while run:
     clock.tick(fps)
 
     marker.draw()
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
@@ -78,8 +77,8 @@ while run:
             #ზომები მარკერის
             if event.key == pygame.K_m:
                 marker.size += marker.value
-                marker.rect.x -= marker.value / 2
-                marker.rect.y -= marker.value / 2
+                marker.rect.centerx -= marker.value / 2
+                marker.rect.centery -= marker.value / 2
 
             if event.key == pygame.K_n:
                 marker.size -= marker.value
